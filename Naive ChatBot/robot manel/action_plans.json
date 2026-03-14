@@ -1,0 +1,162 @@
+{
+    "PICK_PLACE": {
+        "description": "Pick up, move, or place an object",
+        "steps": [
+            "identify_target_object",
+            "plan_approach_trajectory",
+            "open_gripper",
+            "approach_object",
+            "close_gripper",
+            "lift_object",
+            "transport_to_destination",
+            "place_object",
+            "open_gripper",
+            "retract_arm"
+        ],
+        "safety_notes": "Verify object weight within gripper capacity before lifting"
+    },
+    "CUT": {
+        "description": "Cut, saw, or trim a piece of wood",
+        "steps": [
+            "verify_workpiece_clamped",
+            "select_cutting_tool",
+            "measure_cut_position",
+            "align_cutting_tool",
+            "activate_dust_extraction",
+            "execute_cut",
+            "deactivate_tool",
+            "verify_cut_quality",
+            "remove_offcut"
+        ],
+        "safety_notes": "Ensure workpiece is securely clamped. Verify guard is in place."
+    },
+    "DRILL": {
+        "description": "Drill or bore a hole in a workpiece",
+        "steps": [
+            "verify_workpiece_clamped",
+            "select_drill_bit",
+            "mark_drill_position",
+            "set_drill_depth",
+            "align_drill",
+            "activate_drill",
+            "drill_to_depth",
+            "retract_drill",
+            "deactivate_drill",
+            "clear_debris"
+        ],
+        "safety_notes": "Use backing board to prevent tearout. Wear eye protection."
+    },
+    "SAND": {
+        "description": "Sand or smooth a wood surface",
+        "steps": [
+            "verify_workpiece_secured",
+            "select_sandpaper_grit",
+            "attach_sandpaper_to_sander",
+            "activate_dust_extraction",
+            "sand_surface_with_grain",
+            "check_surface_smoothness",
+            "change_grit_if_needed",
+            "final_pass",
+            "deactivate_sander",
+            "clean_dust"
+        ],
+        "safety_notes": "Always sand with the grain. Start coarse, finish fine."
+    },
+    "ASSEMBLE": {
+        "description": "Join, attach, or assemble wooden components",
+        "steps": [
+            "verify_all_parts_present",
+            "dry_fit_components",
+            "identify_fastening_method",
+            "apply_glue_if_needed",
+            "align_components",
+            "insert_fasteners",
+            "tighten_fasteners",
+            "verify_alignment",
+            "clamp_if_needed",
+            "check_structural_integrity"
+        ],
+        "safety_notes": "Dry fit before final assembly. Check squareness at each step."
+    },
+    "GLUE": {
+        "description": "Apply adhesive to bond wood surfaces",
+        "steps": [
+            "verify_surfaces_clean",
+            "verify_surfaces_dry",
+            "select_adhesive_type",
+            "apply_glue_evenly",
+            "spread_with_brush_or_roller",
+            "join_surfaces",
+            "align_components",
+            "apply_clamps",
+            "remove_squeeze_out",
+            "set_drying_timer"
+        ],
+        "safety_notes": "Clean squeeze-out before it dries. Ensure adequate clamping pressure."
+    },
+    "CLAMP": {
+        "description": "Apply or manage clamps on a workpiece",
+        "steps": [
+            "select_clamp_type",
+            "position_clamp",
+            "protect_surface_with_pads",
+            "tighten_clamp",
+            "verify_alignment_maintained",
+            "check_pressure_distribution",
+            "set_timer_if_gluing",
+            "monitor_for_slippage"
+        ],
+        "safety_notes": "Use pads to prevent clamp marks. Do not overtighten."
+    },
+    "TOOL_ASSIST": {
+        "description": "Fetch, locate, or hand a tool to the operator",
+        "steps": [
+            "identify_requested_tool",
+            "locate_tool_in_storage",
+            "navigate_to_tool_location",
+            "pick_up_tool",
+            "navigate_to_operator",
+            "present_tool_safely",
+            "confirm_handover"
+        ],
+        "safety_notes": "Present sharp tools handle-first. Confirm operator has grip before releasing."
+    },
+    "NAVIGATE": {
+        "description": "Move the robot to a specified location",
+        "steps": [
+            "identify_destination",
+            "plan_path",
+            "check_path_clear",
+            "begin_navigation",
+            "avoid_obstacles",
+            "arrive_at_destination",
+            "confirm_arrival"
+        ],
+        "safety_notes": "Reduce speed near humans. Stop if path is blocked."
+    },
+    "STATUS": {
+        "description": "Report on task progress and system state",
+        "steps": [
+            "compile_task_history",
+            "calculate_completion_percentage",
+            "list_completed_tasks",
+            "list_remaining_tasks",
+            "report_any_errors",
+            "generate_summary"
+        ],
+        "safety_notes": "None"
+    },
+    "MEASURE": {
+        "description": "Measure dimensions, angles, or verify alignment",
+        "steps": [
+            "identify_measurement_type",
+            "select_measurement_tool",
+            "position_measurement_tool",
+            "take_reading",
+            "verify_against_specification",
+            "report_result",
+            "flag_if_out_of_tolerance"
+        ],
+        "safety_notes": "Double-check critical measurements before cutting."
+    }
+}
